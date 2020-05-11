@@ -5,7 +5,16 @@
   <title>Basketball Team</title>
  </head>
  <body>
- 
+    <%titles = ["Coach:", "Point Guard:", "Shooting Guard:", "Power Forward:", "Small Forward:", "Center:"]%>
+    <%v = 0%>
+    <%@params.each do |key, value|%>
+        <%if key == 'name'%>
+        <h1>Team Name: <%=value%></h1>
+        <%else%>
+        <h2><%=titles[v] %> <%= value%> </h2>
+        <%v +=1%>
+        <%end%>
+    <%end%>
 
 
  </body>
